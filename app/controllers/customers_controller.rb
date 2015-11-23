@@ -1,6 +1,6 @@
 class CustomersController < ApplicationController
   def index
-    @Customers = Customer.all
+    @customers = Customer.all
   end
 
   def new
@@ -9,7 +9,7 @@ class CustomersController < ApplicationController
 
   def create
     @customer = Customer.new(customer_params)
-    if  @customer.save
+    if @customer.save
       redirect_to @customer
     else
       render :new
@@ -22,7 +22,7 @@ class CustomersController < ApplicationController
 
   def update
     @customer = Customer.find(params[:id])
-    if  @customer.update(customer_params)
+    if @customer.update(customer_params)
       redirect_to @customer
     else
       render :edit
@@ -36,12 +36,7 @@ class CustomersController < ApplicationController
   def destroy
     @customer = Customer.find(params[:id])
     @customer.destroy
-    redirect_to customer_url
-  end
-
-  def full_name
-    full_name = family_name + given_name
-    full_name
+    redirect_to customers_url
   end
 
   private
@@ -53,5 +48,6 @@ class CustomersController < ApplicationController
       :email
       )
   end
+
 
 end
