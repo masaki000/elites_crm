@@ -1,4 +1,8 @@
 class CustomersController < ApplicationController
+  # before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+
+
   def index
     @customers = Customer.page(params[:page])
   end
