@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+# Staff.create(family_name: "鈴木", given_name: "テスト", email: "test@sparta.com", birth_day: "1980/1/1")
+
+100.times do |index|
+  Customer.create(family_name: "鈴木", given_name: "太郎", email: "customer_#{index}@sparta.com")
+end
