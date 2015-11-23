@@ -46,3 +46,7 @@ group :development, :test do
   gem 'faker-japanese'     # 本物っぽいテストデータの作成（日本語対応）
 end
 
+group :development do
+  gem 'rails-erd'
+end
+
