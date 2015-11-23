@@ -8,8 +8,11 @@ class CustomersController < ApplicationController
 
   def create
     @customer = Customer.new(customer_params)
-    @customer.save
-    redirect_to @customer
+    if  @customer.save
+      redirect_to @customer
+    else
+      render :new
+    end
   end
 
   def edit
@@ -19,9 +22,15 @@ class CustomersController < ApplicationController
   end
 
   def show
+    @customer = Customer.find(params[:id])
   end
 
   def destroy
+  end
+
+  def full_name
+    full_name = family_name + given_name
+    full_name
   end
 
   private
