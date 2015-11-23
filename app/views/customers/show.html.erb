@@ -3,12 +3,12 @@
 <p>Find me in app/views/customers/show.html.erb</p>
  -->
 
- <div class="row">
+<div class="row">
   <div class="col-lg-12">
     <h1>顧客詳細</h1>
     <dl>
       <dt>お名前</dt>
-      <dd><%= @customer.full_name %> <%= @customer.given_name %></dd>
+      <dd><%= @customer.full_name("様") %></dd>
       <dt>電子メール</dt>
       <dd><%= @customer.email %></dd>
     </dl>
