@@ -33,6 +33,9 @@ class CustomersController < ApplicationController
   end
 
   def destroy
+    @customer = Customer.find(params[:id])
+    @customer.destroy
+    redirect_to customer_url
   end
 
   def full_name
