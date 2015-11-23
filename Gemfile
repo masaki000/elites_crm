@@ -15,7 +15,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
- gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -44,8 +44,8 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  gem 'faker'              # 本物っぽいテストデータの作成
-  gem 'faker-japanese'     # 本物っぽいテストデータの作成（日本語対応）
+  gem 'faker'
+  gem 'faker-japanese'
 end
 
 group :development do
@@ -53,6 +53,6 @@ group :development do
 end
 
 group :production do
-  gem 'mysql2', '= 0.3.16'   # 追加すること、これ1つだけにする
+  gem 'mysql2', '= 0.3.16'
 end
 
